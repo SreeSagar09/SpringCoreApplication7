@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<bean id="employee" class="com.app.Employee">
+		<property name="empId" value="101"/>
+		<property name="empName" value="Smith"/>
+		<property name="age" value="28"/>
+		<property name="designation" value="Software Enginner"/>
+		<property name="address" ref="employeeAddress"/>
+	</bean>
+	
+	<bean id="employeeAddress" class="com.app.Address">
+		<property name="houseNo" value="21-290/1"/>
+		<property name="area" value="Hi-tech city"/>
+		<property name="city" value="Hyderabad"/>
+		<property name="state" value="Telangana"/>
+		<property name="country" value="India"/>
+		<property name="zipCode" value="5006112"/>
+	</bean>
+	
+	<bean id="student" class="com.app.Student">
+		<property name="sId" value="102"/>
+		<property name="sName" value="Rose"/>
+		<property name="age" value="26"/>
+		<property name="course" value="Computers Application"/>
+		<property name="address" ref="studentAddress"/>
+	</bean>
+	
+	<bean id="studentAddress" class="com.app.Address">
+		<property name="houseNo" value="450-12-1"/>
+		<property name="area" value="Ammeerpet"/>
+		<property name="city" value="Hyderabad"/>
+		<property name="state" value="Telangana"/>
+		<!-- <property name="country" value="India"/> -->
+		<property name="zipCode" value="5006100"/>
+	</bean>
+
+</beans>
